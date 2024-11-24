@@ -1,0 +1,23 @@
+2024-11-20 15:38:57,720 Install package numpy for more functionality.
+2024-11-20 15:38:57,720 Install package gmpy2 for better performance.
+2024-11-20 15:38:57,750 Start MPyC runtime v0.10
+2024-11-20 15:38:57,924 All 5 parties connected.
+sum a =  [1, 2, 1, 1, 1]
+sum a =  [1, 2, 1, 1, 1]
+sum a =  -2337533774143177882
+2024-11-20 15:38:57,936 Stop MPyC -- elapsed time: 0:00:00.011|bytes sent: 328
+2024-11-20 15:38:57,958 Exception in callback _SelectorSocketTransport._call_connection_lost(ConnectionRes...eset by peer'))
+handle: <Handle _SelectorSocketTransport._call_connection_lost(ConnectionRes...eset by peer'))>
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1191, in _call_connection_lost
+    super()._call_connection_lost(exc)
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 911, in _call_connection_lost
+    self._protocol.connection_lost(exc)
+  File "/app/venv/lib/python3.12/site-packages/mpyc/asyncoro.py", line 123, in connection_lost
+    raise exc
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1013, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer

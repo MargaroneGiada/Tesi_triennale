@@ -1,0 +1,8 @@
+2024-11-20 15:38:57,689 Install package numpy for more functionality.
+2024-11-20 15:38:57,690 Install package gmpy2 for better performance.
+2024-11-20 15:38:57,721 Start MPyC runtime v0.10
+2024-11-20 15:38:57,925 All 5 parties connected.
+sum a =  [1, 2, 1, 1, 1]
+sum a =  [1, 2, 1, 1, 1]
+sum a =  6
+2024-11-20 15:38:57,936 Stop MPyC -- elapsed time: 0:00:00.011|bytes sent: 328

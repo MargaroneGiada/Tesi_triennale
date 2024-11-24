@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  mpyc-node1:
+    build: .
+    container_name: mpyc-node1
+    networks:
+      mpyc-net:
+        ipv4_address: 172.25.0.2
+    command: ["python", "script.py"]
+    stdin_open: true
+    tty: true
+
+  # mpyc-node2:
+  #   build: .
+  #   container_name: mpyc-node2
+  #   networks:
+  #     mpyc-net:
+  #       ipv4_address: 172.25.0.3
+  #   command: ["python", "app/nodo2.py"]
+  #   stdin_open: true
+  #   tty: true
+
+  # Altri nodi...
+
+networks:
+  mpyc-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/24
