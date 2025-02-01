@@ -1,5 +1,5 @@
 ## Tesi triennale
-###(Bachelor's thesis)
+### (Bachelor's thesis)
 #### Vulnerability assessment su libreria Python che implementa Secure Multi-Party Computation
 ##### (Vulnerability assessment on a Python library implementing Secure Multi-Party Computation)
 
