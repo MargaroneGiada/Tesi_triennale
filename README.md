@@ -1,6 +1,5 @@
 # Tesi triennale (Bachelor's thesis)
-### Vulnerability assessment su libreria Python che implementa Secure Multi-Party Computation
-###### Vulnerability assessment on a Python library implementing Secure Multi-Party Computation
+### Vulnerability assessment su libreria Python che implementa Secure Multi-Party Computation (Vulnerability assessment on a Python library implementing Secure Multi-Party Computation)
 
 <html> <h2>Abstract </h2> <p> L’esponenziale diffusione di applicazioni che necessitano di protezione di dati
  sensibili ha portato un interesse crescente verso i protocolli di Secure Multi
@@ -14,3 +13,4 @@ no poi evidenziato delle vulnerabilit`a nella gestione degli input e della loro
  condivisione, oltre a una limitata robustezza contro azioni non previste dal
  protocollo. Questo lavoro ha dunque evidenziato la necessit`a di miglioramenti
  sia operativi che crittografici.</p></html>
+
