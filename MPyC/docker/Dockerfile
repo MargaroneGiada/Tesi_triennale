@@ -12,6 +12,7 @@ RUN /app/venv/bin/pip install mpyc
 # Copia lo script Python
 COPY mpyc_script.py ./app/mpyc_script.py
 COPY malicious_printer.py ./app/malicious_printer.py
+COPY malicious_sum.py ./app/malicious_sum.py
 COPY malicious_send_message.py ./app/malicious_send_message.py
 
 # Definisci l'ambiente virtuale come Python predefinito

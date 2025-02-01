@@ -1,19 +1,19 @@
 version: '3.8'
 services:
-    mpyc-node-1:
-        build: .
-        stdin_open: true
-        tty: true
-        # command: ["python", "app/mpyc_script.py", "-P", "localhost", "-P", "172.23.0.3", "-P", "172.23.0.4", "-P", "172.23.0.5","-P", "172.23.0.6","-I 0"]
-        command: ["python", "app/mpyc_script.py", "-P", "localhost",  "-P", "172.23.0.5", "-P", "172.23.0.6", "-I 0"]
-        networks:
-            mpyc-net:
-                ipv4_address: 172.23.0.2
+    # mpyc-node-1:
+    #     build: .
+    #     stdin_open: true
+    #     tty: true
+    #     command: ["python", "app/mpyc_script.py", "-P", "localhost", "-P", "172.23.0.3", "-P", "172.23.0.4", "-P", "172.23.0.5","-P", "172.23.0.6","-I 0"]
+    #     # command: ["python", "app/mpyc_script.py", "-P", "localhost",  "-P", "172.23.0.5", "-P", "172.23.0.6", "-I 0"]
+    #     networks:
+    #         mpyc-net:
+    #             ipv4_address: 172.23.0.2
     # mpyc-node2:
     #     build: .
     #     stdin_open: true
     #     tty: true
-    #     command: ["python", "./app/malicious.py", "-P", "172.23.0.2", "-P", "localhost", "-P", "172.23.0.4", "-P", "172.23.0.5","-P", "172.23.0.6","-I 1"]
+    #     command: ["python", "./app/mpyc_script.py", "-P", "172.23.0.2", "-P", "localhost", "-P", "172.23.0.4", "-P", "172.23.0.5","-P", "172.23.0.6","-I 1"]
     #     networks:
     #         mpyc-net:
     #             ipv4_address: 172.23.0.3
@@ -25,24 +25,41 @@ services:
     #     networks:
     #         mpyc-net:
     #             ipv4_address: 172.23.0.4
-    mpyc-node-malicious:
+    # mpyc-node-malicious:
+    #     build: .
+    #     stdin_open: true
+    #     tty: true
+    #     command: ["python", "./app/malicious_sum.py", "-P", "172.23.0.2", "-P", "172.23.0.3", "-P", "172.23.0.4", "-P", "localhost","-P", "172.23.0.6", "-I 3"]
+    #     # command: ["python", "./app/malicious_sum.py", "-P", "172.23.0.2", "-P", "localhost", "-P", "172.23.0.6", "-I 1"]
+    #     networks:
+    #         mpyc-net:
+    #             ipv4_address: 172.23.0.5
+    # mpyc-node-4:
+    #     build: .
+    #     stdin_open: true
+    #     tty: true
+    #     command: ["python", "./app/mpyc_script.py", "-P", "172.23.0.2", "-P", "172.23.0.3", "-P", "172.23.0.4", "-P", "172.23.0.5", "-P", "localhost", "-I 4"]
+    #     # command: ["python", "./app/mpyc_script.py", "-P", "172.23.0.2", "-P", "172.23.0.5", "-P", "localhost", "-I 2"]
+    #     networks:
+    #         mpyc-net:
+    #             ipv4_address: 172.23.0.6
+    mpyc-node-1:
         build: .
         stdin_open: true
         tty: true
-        # command: ["python", "./app/mpyc_script.py", "-P", "172.23.0.2", "-P", "172.23.0.3", "-P", "172.23.0.4", "-P", "localhost","-P", "172.23.0.6", "-I 3"]
-        command: ["python", "./app/malicious_printer.py", "-P", "172.23.0.2", "-P", "localhost", "-P", "172.23.0.6", "-I 1"]
+        command: ["python", "app/mpyc_script.py", "-P", "localhost", "-P", "172.23.0.3", "-I 0"]
+        # command: ["python", "app/mpyc_script.py", "-P", "localhost",  "-P", "172.23.0.5", "-P", "172.23.0.6", "-I 0"]
         networks:
             mpyc-net:
-                ipv4_address: 172.23.0.5
-    mpyc-node-2:
+                ipv4_address: 172.23.0.2
+    mpyc-node2:
         build: .
         stdin_open: true
         tty: true
-        # command: ["python", "./app/mpyc_script.py", "-P", "172.23.0.2", "-P", "172.23.0.3", "-P", "172.23.0.4", "-P", "172.23.0.5", "-P", "localhost", "-I 4"]
-        command: ["python", "./app/mpyc_script.py", "-P", "172.23.0.2", "-P", "172.23.0.5", "-P", "localhost", "-I 2"]
+        command: ["python", "./app/mpyc_script.py", "-P", "172.23.0.2", "-P", "localhost","-I 1"]
         networks:
             mpyc-net:
-                ipv4_address: 172.23.0.6
+                ipv4_address: 172.23.0.3
 networks:
     mpyc-net:
         driver: bridge
