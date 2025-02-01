@@ -1,6 +1,6 @@
-## Vulnerability assessment su liberia Python che implementa Secure Multi-Party Computation
+# Vulnerability assessment su liberia Python che implementa Secure Multi-Party Computation
 
-<html> <h2>Abstract </h2> <p> L’esponenziale diffusione di applicazioni che necessitano di protezione di dati
+<html> <h3>Abstract </h2> <p> L’esponenziale diffusione di applicazioni che necessitano di protezione di dati
  sensibili ha portato un interesse crescente verso i protocolli di Secure Multi
 Party Computation, che consentono l’elaborazione congiunta di calcoli su dati
  privati senza rivelare il loro contenuto. Lo scopo di questa tesi `e analizzare
